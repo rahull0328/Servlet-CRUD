@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 public class insertForm extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
@@ -27,9 +27,47 @@ public class insertForm extends HttpServlet {
         out.println("<title>Servlet insertForm</title>");
         out.println("</head>");
         out.println("<body>");
+        out.println("<center>");
+            out.println("<h2>Add Student Data</h2>");
+            out.println("<hr width='10%' />");
+            out.println("<br />");
+        out.println("</center>");    
         out.println("<form action='insert' method='get'>");
-        out.println("<label>Full Name</label>");
-        out.println("<input type='text' name='name' id='name' />");
+        out.println("<table border='1' style='border-collapse:collapse;' align='center'>");
+            out.println("<tr>");
+                out.println("<td>");
+                    out.println("<label>Full Name</label>");
+                out.println("</td>");
+                out.println("<td>");
+                    out.println("<input type='text' name='name' id='name' />");
+                out.println("</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+                out.println("<td>");
+                    out.println("<label>Email</label>");
+                out.println("</td>");    
+                out.println("<td>");
+                    out.println("<input type='email' name='email' id='email' />");
+                out.println("</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+                out.println("<td>");
+                    out.println("<label>Contact Number</label>");
+                out.println("</td>");    
+                out.println("<td>");
+                    out.println("<input type='text' name='number' id='number' />");
+                out.println("</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+                out.println("<td colspan='2'>");
+                    out.println("<center>");
+                        out.println("<br />");
+                        out.println("<input type='submit' name='submit' id='submit' />");
+                    out.println("</center>");    
+                        out.println("<br />");
+                out.println("</td>");
+            out.println("</tr>");
+        out.println("</table>");
         out.println("</form>");
         out.println("</body>");
         out.println("</html>");

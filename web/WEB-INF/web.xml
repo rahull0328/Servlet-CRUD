@@ -8,6 +8,10 @@
         <servlet-name>insertForm</servlet-name>
         <servlet-class>crud.insertForm</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>insert</servlet-name>
+        <servlet-class>crud.insert</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>viewData</servlet-name>
         <url-pattern>/viewData</url-pattern>
@@ -15,5 +19,9 @@
     <servlet-mapping>
         <servlet-name>insertForm</servlet-name>
         <url-pattern>/insertForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>insert</servlet-name>
+        <url-pattern>/insert</url-pattern>
     </servlet-mapping>
 </web-app>
