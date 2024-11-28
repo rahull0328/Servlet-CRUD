@@ -24,12 +24,13 @@ public class viewData extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><body bgcolor= 'pink'>");
         out.println("<center><h1> CRUD - Servlet<h1><Center>");
-        out.println("<hr width='50%' />");
+        out.println("<hr width='20%' />");
         out.println("<table border='1' align='center'>");
         out.println("<tr>");
         out.println("<th>Name</th>");
         out.println("<th>Email</th>");
         out.println("<th>Mobile</th>");
+        out.println("<th>Action</th>");
         Connection con = null;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -42,6 +43,10 @@ public class viewData extends HttpServlet {
                 out.println("<td>" + rs.getString("name") + " </td>");
                 out.println("<td>" + rs.getString("email") + "</td>");
                 out.println("<td>" + rs.getString("mobile") + "</td>");
+                out.println("<td>");
+                out.println("<a href='delete?id="+rs.getString("id")+"' style='text-decoration: none;' />Delete&nbsp;&nbsp;|&nbsp;");
+                out.println("<a href='updateForm?id="+rs.getString("id")+"' style='text-decoration: none;' />Update");
+                out.println("</td>");
                 out.println("</tr>");
             }
             rs.close();
@@ -51,6 +56,9 @@ public class viewData extends HttpServlet {
             out.println(ex.getMessage());
         }
         out.println("</table>");
-        out.println("</body></html>");
+        out.println("<br />");
+        out.println("<a href='insertForm' style='text-decoration: none;' />Add Data");
+        out.println("</body>");
+        out.println("</html>");
     }
 }
