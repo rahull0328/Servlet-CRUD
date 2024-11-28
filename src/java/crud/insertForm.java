@@ -26,7 +26,7 @@ public class insertForm extends HttpServlet {
         out.println("<head>");
         out.println("<title>Servlet insertForm</title>");
         out.println("</head>");
-        out.println("<body>");
+        out.println("<body bgcolor='cyan'>");
         out.println("<center>");
             out.println("<h2>Add Student Data</h2>");
             out.println("<hr width='10%' />");
@@ -55,7 +55,7 @@ public class insertForm extends HttpServlet {
                     out.println("<label>Contact Number</label>");
                 out.println("</td>");    
                 out.println("<td>");
-                    out.println("<input type='text' name='number' id='number' />");
+                    out.println("<input type='text' name='mobile' id='mobile' />");
                 out.println("</td>");
             out.println("</tr>");
             out.println("<tr>");
@@ -69,6 +69,8 @@ public class insertForm extends HttpServlet {
             out.println("</tr>");
         out.println("</table>");
         out.println("</form>");
+        out.println("<br />");
+        out.println("<center><a href='viewData' style='text-decoration: none;' />View Data</center>");
         out.println("</body>");
         out.println("</html>");
     }
