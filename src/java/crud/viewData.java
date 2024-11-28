@@ -44,8 +44,8 @@ public class viewData extends HttpServlet {
                 out.println("<td>" + rs.getString("email") + "</td>");
                 out.println("<td>" + rs.getString("mobile") + "</td>");
                 out.println("<td>");
-                out.println("<a href='delete?id="+rs.getString("id")+"' style='text-decoration: none;' />Delete&nbsp;&nbsp;|&nbsp;");
-                out.println("<a href='updateForm?id="+rs.getString("id")+"' style='text-decoration: none;' />Update");
+                out.println("<a href='delete?id="+rs.getString("id")+"' style='text-decoration: none;color:red;' />Delete&nbsp;&nbsp;|&nbsp;");
+                out.println("<a href='updateForm?id="+rs.getString("id")+"' style='text-decoration: none;color:green;' />Update");
                 out.println("</td>");
                 out.println("</tr>");
             }
