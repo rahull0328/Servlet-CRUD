@@ -16,6 +16,14 @@
         <servlet-name>delete</servlet-name>
         <servlet-class>crud.delete</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>updateForm</servlet-name>
+        <servlet-class>crud.updateForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>crud.update</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>viewData</servlet-name>
         <url-pattern>/viewData</url-pattern>
@@ -31,5 +39,13 @@
     <servlet-mapping>
         <servlet-name>delete</servlet-name>
         <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateForm</servlet-name>
+        <url-pattern>/updateForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
     </servlet-mapping>
 </web-app>
